@@ -1,26 +1,35 @@
-# vue-coe-highlight
-
 ## Project setup
 ```
-yarn install
+yarn install vue-coe-highlight
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+### Example
+```vue
+<template>
+  <div id="app">
+    <vue-coe-hightlight :code="code"></vue-coe-hightlight>
+    <vue-coe-hightlight>{{ code }}</vue-coe-hightlight>
+  </div>
+</template>
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+<script>
+import VueCoeHightlight from './VueCoeHightlight.js'
 
-### Run your tests
-```
-yarn run test
-```
+export default {
+  name: 'vue-coe-highlight',
 
-### Lints and fixes files
-```
-yarn run lint
+  components: { VueCoeHightlight },
+
+  data () {
+    return {
+      code: `<template>
+        <div id="app">
+          <vue-coe-hightlight :code="code"></vue-coe-hightlight>
+          <vue-coe-hightlight>{{ code }}</vue-coe-hightlight>
+        </div>
+      </template>`
+    }
+  }
+}
+</script>
 ```
