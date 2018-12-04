@@ -9,7 +9,7 @@ const VueCoeHighLight = {
   render (h, { props, children }) {
     const code = children && !!children.length && children[0].text
 
-    if (!props.coce && !code) {
+    if (!props.code && !code) {
       console.warn('code is required!')
       return false
     }
