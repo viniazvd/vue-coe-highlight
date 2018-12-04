@@ -13,7 +13,9 @@
     "highlight.js"
   ],
   "main": "dist/vue-coe-highlight.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": {
     "name": "Vinicius Azevedo",
     "email": "viniazvd@gmail.com"
@@ -24,13 +26,14 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "bili src/index.js --formats cjs,es,umd --banner --js buble",
+    "build": "bili index.js --formats cjs,es,umd --banner --js buble",
     "test": "jest --verbose"
   },
   "dependencies": {
     "prismjs": "^1.15.0"
   },
   "devDependencies": {
+    "@vue/test-utils": "<=1.0.0-beta.11 || >1.0.0-beta.12",
     "babel-jest": "^23.6.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -41,8 +44,7 @@
     "vue": "^2.5.16",
     "vue-jest": "^3.0.0",
     "vue-template-compiler": "^2.5.17",
-    "vue-test-utils": "^1.0.0-beta.11",
-    "@vue/test-utils": "<=1.0.0-beta.11 || >1.0.0-beta.12"
+    "vue-test-utils": "^1.0.0-beta.11"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -51,8 +53,7 @@
       "vue"
     ],
     "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
     },
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
